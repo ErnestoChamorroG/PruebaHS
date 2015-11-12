@@ -1,0 +1,56 @@
+﻿<%@ Master Language="VB"   AutoEventWireup="false" CodeBehind="PaginaMaestra.master.vb" Inherits="CAPA_PRESENTACION.PaginaMaestra" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>HealthSystem</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style3 {
+            text-align: center;
+        }
+        .auto-style4 {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style4">
+                    <asp:HyperLink ID="HprLnkRegistrarse" runat="server" NavigateUrl="~/RegistroUsuarioPagWeb.aspx">Registrarse</asp:HyperLink>
+&nbsp;
+                    <asp:HyperLink ID="HprLnkIniciaresion" runat="server" NavigateUrl="~/InicioDeSesion.aspx">Iniciar Sesión</asp:HyperLink>
+&nbsp;
+                    <asp:HyperLink ID="HprLnkRecuperarPass" runat="server" NavigateUrl="~/RecuperarContraseña.aspx">Recuperar Contraseña</asp:HyperLink>
+&nbsp;
+                    <asp:Label ID="LblNombre" runat="server" Visible="False"></asp:Label>
+&nbsp;
+                    <asp:HyperLink ID="HypLinkActualizarD" runat="server" NavigateUrl="~/ActualizarDatosUsuExt.aspx" Visible="False">Actualizar Datos</asp:HyperLink>
+&nbsp;
+                    <asp:Button ID="BtnSalir" runat="server" Text="Salir" />
+                </td>
+            </tr>
+            </table>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+    <footer>
+        <div id="footer" class="auto-style3">&copy; HealthSystem - 2015</div>
+    </footer>
+    
+</body>
+</html>
